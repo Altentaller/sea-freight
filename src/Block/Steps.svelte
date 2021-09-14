@@ -7,9 +7,15 @@
 
 <style>
     #steps{
-        margin: 70px 0;
+        padding: 10px 0 20px 0;
+        background: #232d41; 
     }
-
+    #steps h2{
+        color: rgba(255,255,255,0.2);
+        text-transform: uppercase;
+        padding: 0 0 20px 30px;
+        font-size: 45px;
+    }
     .steps-items{
         display: flex;
         justify-content: center;
@@ -21,6 +27,9 @@
 
 
 <section id="steps">
+    <h2>
+        Наша схема работы →
+    </h2>
     <div class="steps-items">
         {#each $steps as step (step.id)}
         <StepsItem

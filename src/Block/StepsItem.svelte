@@ -13,6 +13,7 @@
         padding: 20px;  
         margin: 20px;   
         border: 1px solid gray;
+        color: #fff;
         -moz-transition: 0.5s ease;
         -ms-transition: 0.5s ease;
         -o-transition: 0.5s ease;
@@ -27,7 +28,7 @@
         font-size: 30px;
         font-weight: 500;
         margin: 0;
-        color: #475985;
+        color: #fff;
     }
 
     .num{
@@ -43,11 +44,11 @@
     .num span{
         margin-left: 10px;
         font-weight: 500;
+        color: #232d41;
     }
 
-    .step:hover > .num{
-        background: #232d41 ;
-        color: #fff;
+    .step:hover .num{
+        scale: 1.1
     }
 
   </style>
