@@ -3,15 +3,15 @@
 </script>
         
 <style>
-.promo{
+#promo{
     display: flex;
     justify-content: space-around;
     align-items: center;
     width: 100%;
     box-sizing: border-box;
-    margin-top: 50px;
+    padding: 50px 0;
     min-height: 400px;
-    background: #f6f6f6;    
+    background: #232d41;
     font-size: 19px;
 }
 
@@ -25,6 +25,7 @@ h1{
     font-size: 50px;
     font-weight: 700;
     text-transform: uppercase;
+    color: #fff
 }
 
 img{
@@ -63,9 +64,9 @@ input{
 
 </style>
 
-<div class="promo">
+<section id="promo">
     <div class="title">
-        <h1>Морские контейнерные грузоперевозки из Китая и Кореи</h1>
+        <h1>Морские контейнерные грузоперевозки <br>из Китая и Кореи</h1>
         <img src="assets/product.png" alt="cargo">
     </div>
     <div class="form">
@@ -82,4 +83,4 @@ input{
         </form>
     </div>
     
-</div>
+</section>
