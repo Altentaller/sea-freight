@@ -1,8 +1,8 @@
-
-
-
 <script>
-
+    import Button from '../UI/Button.svelte';
+export let email;
+export let phone; 
+export let address;
 </script>
 
 
@@ -23,16 +23,23 @@ footer{
     background: #232d41;
     padding: 30px;
     color: #fff;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 500;
 }
+
 </style>
 
 <footer>
     <script charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A99789942423a09eabbb2af9377537ef8b96d6629c54857df6cf766bc75be481b&amp;width=100%25&amp;height=400&amp;lang=ru_RU&amp;scroll=true"></script>
 
     <div class="contact">
-        <p>info@email.ru</p>
+        <p>
+            <Button href="mailto:{email}" caption="{email}" />
+        </p>
+        <p>
+            <Button href="tel:{phone}" caption="{phone}" />
+        </p>
+        <p>{address}</p>
         <img src="assets/wechat.png" alt="wechat">
     </div>
 </footer>
