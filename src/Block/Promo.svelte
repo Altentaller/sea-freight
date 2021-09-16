@@ -1,7 +1,8 @@
 <script>
- import Button from '../UI/Button.svelte'; 
+    import Button from '../UI/Button.svelte'; 
+    import Input from '../UI/Input.svelte'; 
 </script>
-        
+    
 <style>
 #promo{
     display: flex;
@@ -56,26 +57,33 @@ p{
     font-weight: 200;
     font-size: 16px
 }
-
-input{
-    width: 100%;
-    font-weight: 300;
-}
-
 </style>
 
 <section id="promo">
     <div class="title">
-        <h1>Морские контейнерные грузоперевозки <br>из Китая и Кореи</h1>
+        <h1>Морские контейнерные перевозки <br>из Китая и Кореи</h1>
         <img src="assets/product.png" alt="cargo">
     </div>
     <div class="form">
         <h2>Запрос коммерческого предложения</h2>
         <form>
-            <input type="text" name="name" placeholder="Имя">
-            <input type="text" name="phone"  placeholder="Телефон">
-            <input type="email" name="email" placeholder="Email *"  required>
-            <input type="text" name="item"  placeholder="Наименование товара">
+            <Input 
+                id='name' 
+                placeholder='Ваше имя' 
+                type='text'/>
+            <Input 
+                id='phone' 
+                placeholder='Телефон' 
+                type='text'/>
+            <Input 
+                id='email' 
+                placeholder='Email *' 
+                type='text'/>
+            <Input 
+                id='description' 
+                placeholder='Комментарий' 
+                controlType='textarea'
+                rows='2' />
             
             <Button type="button" caption="Жду расчет" />
 
