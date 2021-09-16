@@ -1,25 +1,29 @@
 <script>
-import Button from '../UI/Button.svelte'; 
+    import Button from '../UI/Button.svelte'; 
+    import ModalView from '../UI/ModalView.svelte';
+    import Modal from 'svelte-simple-modal';
 
+    export let email;
+    export let phone; 
 
-export let email;
-export let phone; 
 </script>
     
 <style>
 
     header{
-        position: fixed;
-        width: 100%;
-        top: 0;
-        left: 0;
-        height: 70px;
-        background: #232d41;
         display: flex;
         justify-content: space-around;
         align-items: center;
+        width: 100%;        
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 60px;
+        background: #232d41;        
         box-shadow: 0 2px 6px rgba(0, 0, 0, 0.26);
         color: #ffffff;
+        font-size: 16px;
+        font-weight: 500;
     }
 
     a{
@@ -32,6 +36,9 @@ export let phone;
     <div>
         <Button href="href" caption="Лого" />
     </div>
+    <div>
+        Логистика и консалтинг под ключ
+    </div>
     <div> 
        <Button href="mailto:{email}" caption="{email}" />
     </div>
@@ -39,7 +46,9 @@ export let phone;
        <Button href="tel:{phone}" caption="{phone}" />
     </div>
     <div>
-        <Button mode="outline" type="button" caption="Обратный звонок" />
+        <Modal>
+            <ModalView />
+        </Modal>
     </div>
 
 
