@@ -78,6 +78,6 @@
   {#if href}
     <a {href}>{@html caption}</a>
   {:else}
-    <button class="{mode}" {type}>{@html caption}</button>
+    <button class="{mode}" {type} on:click>{@html caption}</button>
   {/if}
   
