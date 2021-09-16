@@ -1,14 +1,15 @@
 <script>
-import * as animateScroll from "svelte-scrollto";
-import Header from './Block/Header.svelte'; 
-import Promo from './Block/Promo.svelte'; 
-import Service from './Block/Service.svelte'; 
-import Steps from './Block/Steps.svelte';
-import Partners from './Block/Partners.svelte';
-import Footer from './Block/Footer.svelte';
+    import * as animateScroll from "svelte-scrollto";
+    import Header from './Block/Header.svelte'; 
+    import Promo from './Block/Promo.svelte'; 
+    import Service from './Block/Service.svelte'; 
+    import Steps from './Block/Steps.svelte';
+    import Partners from './Block/Partners.svelte';
+    import Footer from './Block/Footer.svelte';
 
-export let email;
-export let phone;
+    export let email;
+    export let phone;
+    export let address;
 </script>
 
 <svelte:head>
@@ -42,12 +43,14 @@ export let phone;
     }
 </style>
 
+
+
 <Header {email}{phone}/>
 <Promo />
 <Service />
 <Steps />
 <Partners />
-<Footer />
-<!-- партнеры -->
+<Footer {email}{phone}{address}/>
 
 <a class="to-top-btn" on:click={() => animateScroll.scrollToTop()}> ↑ </a>
+
