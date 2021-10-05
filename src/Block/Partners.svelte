@@ -9,7 +9,7 @@
     }
 
 #partners h2{
-        color: rgba(255,255,255,0.2);
+        color: #fff;
         text-transform: uppercase;
         padding: 0 0 20px 30px;
         font-size: 45px;
@@ -27,7 +27,7 @@
 </style>
    
 <section id="partners">
-    <h2>Наши партнеры →</h2>
+    <h2>Наши партнеры 🤝</h2>
     <div class="items">
         <div><img src="assets/partners/maersk_logo.png" alt=""></div> 
         <div><img src="assets/partners/fesco_logo.png" alt=""></div> 
