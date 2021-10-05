@@ -9,7 +9,6 @@
 </script>
     
 <style>
-
     header{
         display: flex;
         justify-content: space-around;
@@ -25,34 +24,30 @@
         font-size: 16px;
         font-weight: 500;
     }
-
-    a{
-        color: #fff
+    .logo{
+        height: 40px;
     }
-
+    a{
+        color: #fff;
+    }
 </style>
 
 <header>
     <div>
-        <Button href="href" caption="Лого" />
+        <img src="assets/logo.png" alt="logo" class="logo">
     </div>
     <div>
         Логистика и консалтинг под ключ
     </div>
     <div> 
-       <Button href="mailto:{email}" caption="{email}" />
+       <Button href="mailto:{email}" caption="✉️ {email}" />
     </div>
     <div>
-       <Button href="tel:{phone}" caption="{phone}" />
+       <Button href="tel:{phone}" caption="☎️ {phone}" />
     </div>
     <div>
         <Modal>
             <ModalView />
         </Modal>
     </div>
-
-
 </header>
-<!-- <Button href="mailto:{email}" caption="Contact" />
-<Button mode="outline" type="button" caption="Favorite" />
- -->
