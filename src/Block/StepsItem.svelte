@@ -1,9 +1,7 @@
 <script>
     export let id;
     export let title;
-    export let description;
-
-  </script>
+</script>
   
   <style>
     .step {         
@@ -25,7 +23,7 @@
     }
 
     h2 {
-        font-size: 30px;
+        font-size: 26px;
         font-weight: 500;
         margin: 0;
         color: #fff;
@@ -39,6 +37,7 @@
         -moz-border-radius: 50px;
         -webkit-border-radius: 50px;
         border-radius: 50px;
+        margin-bottom: 20px;
     }
 
     .num span{
@@ -51,15 +50,14 @@
         scale: 1.1
     }
 
-  </style>
+</style>
   
-  <div class="step">
-    <div>
-      <div class="num"><span>{id}</span></div>
-      <h2>{@html title}</h2>
-      <p>{@html description}</p>
-    </div>
-  </div>
+	<div class="step">
+    	<div>
+      		<div class="num"><span>{id}</span></div>
+      		<h2>{@html title}</h2>
+    	</div>
+  	</div>
 
 
   
