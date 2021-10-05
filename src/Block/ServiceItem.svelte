@@ -11,7 +11,8 @@
     .service {
         width: 22%;
         box-sizing: border-box;
-        border: 3px solid #ebab2e; 
+        background: #ffffff;
+        box-shadow: 6px 6px  #465a82;
         /* box-shadow: 4px 4px 1px #ebab2e; */
         padding: 25px;
         height: 230px;
@@ -21,22 +22,20 @@
         -o-transition: 0.2s ease;
         transition: all 0.2s ease 0s
     }
-   .service:hover h2{
-      scale: 1.01 
-    }
 
     h2 {
         font-size: 20px;
         font-weight: 700;
         margin: 0;
-        color: #fff;
+        color: #000000;
         text-transform: uppercase;
     }
 
   
     p {
       margin-top: 10px;
-      color: #fff;
+      color: #000000;
+      font-size: 19px;
     }
 
 
