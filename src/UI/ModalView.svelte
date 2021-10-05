@@ -10,4 +10,4 @@
     };
   </script>
   
-  <Button on:click={showCallbackPopUp} mode="outline" type="button" caption="Обратный звонок" />
+  <Button on:click={showCallbackPopUp} mode="outline" type="button" caption="📞 Обратный звонок" />
