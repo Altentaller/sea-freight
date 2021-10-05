@@ -3,6 +3,8 @@
     import Header from './Block/Header.svelte'; 
     import Promo from './Block/Promo.svelte'; 
     import Service from './Block/Service.svelte'; 
+    import Features from './Block/Features.svelte'; 
+    import About from './Block/About.svelte'; 
     import Steps from './Block/Steps.svelte';
     import Partners from './Block/Partners.svelte';
     import Footer from './Block/Footer.svelte';
@@ -30,8 +32,8 @@
     .to-top-btn{
         position: fixed;
         display: block;
-        bottom: 80px;
-        right: 60px;
+        bottom: 5px;
+        right: 5px;
         width: 40px;
         height: 40px;
         background: #ebab2e;
@@ -48,6 +50,8 @@
 <Header {email}{phone}/>
 <Promo />
 <Service />
+<Features />
+<About />
 <Steps />
 <Partners />
 <Footer {email}{phone}{address}/>
