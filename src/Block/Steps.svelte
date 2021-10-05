@@ -7,11 +7,11 @@
 
 <style>
     #steps{
-        padding: 10px 0 20px 0;
+        padding: 40px 0 30px 0;
         background: #232d41; 
     }
     #steps h2{
-        color: rgba(255,255,255,0.2);
+        color: #fff;
         text-transform: uppercase;
         padding: 0 0 20px 30px;
         font-size: 45px;
@@ -28,15 +28,13 @@
 
 <section id="steps">
     <h2>
-        Наша схема работы →
+        Наша схема работы 💬
     </h2>
     <div class="steps-items">
         {#each $steps as step (step.id)}
         <StepsItem
           id={step.id}
-          title={step.title}
-          price={step.price}
-          description={step.description} />
+          title={step.title} />
       {/each}
     </div>  
   </section>
