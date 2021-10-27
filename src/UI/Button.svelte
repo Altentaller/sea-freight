@@ -1,8 +1,8 @@
 <script>
-    export let type;
-    export let caption;
-    export let href;
-    export let mode;
+    export let type="";
+    export let caption="";
+    export let href=null;
+    export let mode="";
   </script>
   
   <style>
@@ -76,7 +76,7 @@
   </style>
   
   {#if href}
-    <a {href}>{@html caption}</a>
+    <a {href} class="{mode}">{@html caption}</a>
   {:else}
     <button class="{mode}" {type} on:click>{@html caption}</button>
   {/if}
