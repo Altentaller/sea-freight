@@ -43,11 +43,11 @@
        <Button href="mailto:{email}" caption="✉️ {email}" />
     </div>
     <div>
-       <Button href="tel:{phone}" caption="☎️ {phone}" />
+       <Button href="tel:{phone}" caption="{phone} ☎️ Отдел логистики" />
     </div>
-    <div>
+    <!-- <div>
         <Modal>
             <ModalView />
         </Modal>
-    </div>
+    </div> -->
 </header>
