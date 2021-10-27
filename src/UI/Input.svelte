@@ -1,9 +1,11 @@
 <script>
     export let controlType=null;
     export let id;
-    export let placeholder;
-    export let rows=null;
+    export let placeholder="";
+    export let rows=null; 
+    export let name=null;
     export let type="";
+    export let required=null;
 </script>
 
 <style>
@@ -38,10 +40,12 @@
 
 <div class="form-control">
   	{#if controlType === 'textarea'}
-    	<textarea {rows} {id} placeholder="{placeholder}" />
+    	<textarea {rows} {id} {name} placeholder="{placeholder}" />
     {:else if controlType === 'file'}
-      	<input type="file" {id}  multiple>
-    {:else}
-		<input type="{type}" {id} placeholder="{placeholder}"/>
+      	<input type="file" {id} {name} multiple>
+    {:else if required === 'true'}
+		<input type="{type}" {id} {name} placeholder="{placeholder}" required/>
+	{:else}
+		<input type="{type}" {id} {name} placeholder="{placeholder}"/>
   	{/if}    
 </div>
