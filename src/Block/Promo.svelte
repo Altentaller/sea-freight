@@ -1,6 +1,27 @@
 <script>
     import Button from '../UI/Button.svelte'; 
     import Input from '../UI/Input.svelte'; 
+
+
+window.addEventListener( "load", function () {
+
+  function sendData() {
+    const XHR = new XMLHttpRequest();
+    const FD = new FormData( order );
+    XHR.open( "POST", "http://domain.com/mailer/smart.php" );
+    XHR.send( FD );
+  }
+
+  const order = document.getElementById( "order" );
+  order.addEventListener( "submit", function ( event ) {
+    event.preventDefault();
+    sendData();
+	alert( 'Ваш запрос отправлен в отдел логистики!' );	
+	event.target.reset(); 
+  } );
+
+} );
+
 </script>
     
 <style>
@@ -46,7 +67,7 @@
 
 	h2{
 		text-align: center;
-		font-size: 25px;
+		font-size: 30px;
 		font-weight: 500;
 	}
 
@@ -68,32 +89,39 @@
     </div>
     <div class="form">
         <h2>Запрос коммерческого предложения</h2>
-        <form>
+
+		 <form id="order">
             <Input 
                 id='name' 
+				name='name'
                 placeholder='Ваше имя' 
                 type='text'/>
             <Input 
                 id='phone' 
+				name='phone'
                 placeholder='Телефон' 
                 type='text'/>
             <Input 
                 id='email' 
+				name='email'
                 placeholder='Email *' 
-                type='text'/>
-            <Input 
+                type='email'
+				required="true"/>
+            <!-- <Input 
                 id='file' 
-                controlType='file'/>
+				name='file'
+                controlType='file'/> -->
             <Input 
                 id='description' 
+				name='description'
                 placeholder='Комментарий' 
                 controlType='textarea'
                 rows='2' />
             
-            <Button type="button" caption="📧 Жду расчет" />
+            <Button type="submit" caption="📧 Жду расчет" />
 
             <p>Нажимая кнопку «Жду расчёт», Вы соглашаетесь на обработку персональных данных и с политикой конфиденциальности</p>
-        </form>
+        </form> 
     </div>
     
 </section>
