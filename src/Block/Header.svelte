@@ -1,7 +1,7 @@
 <script>
     import Button from '../UI/Button.svelte'; 
-    import ModalView from '../UI/ModalView.svelte';
-    import Modal from 'svelte-simple-modal';
+    /* import ModalView from '../UI/ModalView.svelte';
+    import Modal from 'svelte-simple-modal'; */
 
     export let email;
     export let phone; 
@@ -27,9 +27,24 @@
     .logo{
         height: 40px;
     }
-    a{
-        color: #fff;
+
+    @media (min-width: 951px){
+        header div:nth-of-type(5){ 
+            display: none
+        }
     }
+    @media (max-width: 950px) {
+        header div:nth-of-type(2),
+        header div:nth-of-type(4){
+            display: none
+        }
+    }
+    @media (max-width: 500px) {
+        header div:nth-of-type(1){
+            display: none
+        }
+    }
+    
 </style>
 
 <header>
@@ -44,6 +59,10 @@
     </div>
     <div>
        <Button href="tel:{phone}" caption="{phone} ☎️ Отдел логистики" />
+    </div>
+
+    <div>
+        <Button href="tel:{phone}" caption="☎️ {phone}" />
     </div>
     <!-- <div>
         <Modal>
