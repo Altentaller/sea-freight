@@ -1,32 +1,48 @@
 <script>
     import Button from '../UI/Button.svelte';
-export let email;
-export let phone; 
-export let address;
+    export let email;
+    export let phone; 
+    export let address;
 </script>
 
 
 <style>
-footer{
-    position: relative;
-    min-height: 400px;
-    border-top: 15px solid #232d41;
-    border-bottom: 30px solid #232d41;
-    text-align: center;
-}
-.contact{
-    position: absolute;
-    top: 0;
-    left: 100px;
-    width: 300px;
-    box-sizing: border-box;
-    background: #232d41;
-    padding: 30px;
-    color: #fff;
-    font-size: 18px;
-    font-weight: 500;
-}
+    footer{
+        position: relative;
+        min-height: 400px;
+        border-top: 15px solid #232d41;
+        border-bottom: 30px solid #232d41;
+        text-align: center;
+    }
+    .contact{
+        position: absolute;
+        top: 0;
+        left: 100px;
+        width: 300px;
+        box-sizing: border-box;
+        background: #232d41;
+        padding: 30px;
+        color: #fff;
+        font-size: 18px;
+        font-weight: 500;
+    }
 
+	@media (min-width: 770px) and (max-width: 960px){ 
+		.contact{
+			top: 0;
+			left: 0px;
+			width: 300px;
+			padding: 30px;
+    	}
+	}
+	@media (max-width: 769px){ 
+		.contact{
+			top: 0;
+			left: 0px;
+			width: 200px;
+			padding: 10px;
+    	}
+	}
 </style>
 
 <footer>
