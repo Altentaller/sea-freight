@@ -1,7 +1,6 @@
 <script>
     import { steps } from './steps-store.js';
     import StepsItem from "./StepsItem.svelte";
-
    
 </script>
 
@@ -10,7 +9,7 @@
         padding: 40px 0 30px 0;
         background: #232d41; 
     }
-    #steps h2{
+    h2{
         color: #fff;
         text-transform: uppercase;
         padding: 0 0 20px 30px;
@@ -23,6 +22,16 @@
         flex-wrap: wrap;
     }
 
+    @media (min-width: 501px) and (max-width: 985px){ 
+		h2{
+			font-size: 30px;
+		}
+	}
+	@media (max-width: 500px){ 
+		h2{
+			font-size: 25px;
+		}
+	}
 </style>
 
 
