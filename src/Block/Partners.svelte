@@ -3,27 +3,47 @@
 </script>
            
 <style>
-#partners{
+	#partners{
         padding: 80px 0 90px 0;
         background: #232d41; 
     }
 
-#partners h2{
+	h2{
         color: #fff;
         text-transform: uppercase;
         padding: 0 0 20px 30px;
         font-size: 45px;
     }
 
-    #partners .items{
+    .items{
         display: flex;
         justify-content: space-around;
     }
 
-    #partners .items img{
+    .items img{
         width: 200px;
     }
    
+    @media (min-width: 501px) and (max-width: 985px){ 
+		h2{
+			font-size: 30px;
+		}
+	}
+	@media (max-width: 500px){ 
+		h2{
+			font-size: 25px;
+		}
+	}
+
+	@media (max-width: 1040px){ 
+		.items{
+			flex-wrap: wrap;
+		}
+		.items img{
+        	width: 150px;
+    	}
+	}
+
 </style>
    
 <section id="partners">
