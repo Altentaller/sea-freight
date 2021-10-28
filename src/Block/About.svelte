@@ -4,30 +4,38 @@
 		padding: 80px 0 10px 0;
 	}
 	
-	#freight h2{
+	h2{
 		color: #fff;
 		text-transform: uppercase;
 		padding: 0 0 50px 30px;
 		font-size: 45px;
-		margin: 0;
+		margin: 0 30px 0 0;
 	}
 
 	.freight-items{
 		display: flex;
 		justify-content: space-around;
-		align-items:flex-start;
+		align-items: center;
 		font-size: 20px;
 		color: #fff;
 	}
 	
 	.freight-items div:nth-child(1) {
-		width: 50%;
+		width: 550px;
 		padding: 30px;
-		margin: 0 40px 0 40px;
+		margin: 0 20px 0 40px;
 		background: #ffffff;
 		color: #000000;
 		text-align: justify;
 		box-shadow: 6px 6px  #465a82;
+	}
+
+	.freight-items div:nth-child(2) {
+		width: 500px;
+		margin: 0 40px 0 20px;
+		border: 2px solid #ebab2e;
+		border-radius: 10px;
+		padding: 0 40px 0 20px;
 	}
 	
 	.items li{
@@ -42,6 +50,40 @@
 
 	span{
 		font-weight: 500;
+	}
+
+	@media (min-width: 501px) and (max-width: 985px){ 
+		h2{
+			font-size: 30px;
+		}
+	}
+	@media (max-width: 500px){ 
+		h2{
+			font-size: 25px;
+		}
+	}
+	@media (max-width: 1030px){ 
+		.freight-items{
+			flex-direction: column;
+			justify-content: flex-start;
+		}
+		.freight-items div:nth-child(1) {
+			width: 85%;
+			margin: 0;
+			padding: 20px;
+		}
+
+		.freight-items div:nth-child(2) {
+			width: 85%;
+			margin: 20px 0 0 0 ;
+			padding: 20px;
+		}
+	}
+
+	@media (max-width: 790px){ 
+		.freight-items{
+			font-size: 18px;
+		}
 	}
 </style>
 
