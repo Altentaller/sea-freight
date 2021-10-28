@@ -50,6 +50,19 @@
         scale: 1.1
     }
 
+
+    @media (min-width: 780px) and (max-width: 1169px){ 
+		.step:nth-child(3n) {
+            page-break-after: avoid;
+            break-after: avoid; 
+        }
+	}
+
+	@media (max-width: 500px){ 
+		h2{
+			font-size: 25px;
+		}
+	}
 </style>
   
 	<div class="step">
