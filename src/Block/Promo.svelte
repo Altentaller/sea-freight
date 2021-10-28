@@ -1,26 +1,23 @@
 <script>
-    import Button from '../UI/Button.svelte'; 
+	import Button from '../UI/Button.svelte'; 
     import Input from '../UI/Input.svelte'; 
 
+	window.addEventListener( "load", function () {
+		function sendData() {
+			const XHR = new XMLHttpRequest();
+			const FD = new FormData( order );
+			XHR.open( "POST", "http://altenic.beget.tech/sea/mailer/smart.php" );
+			XHR.send( FD );
+		}
 
-window.addEventListener( "load", function () {
-
-  function sendData() {
-    const XHR = new XMLHttpRequest();
-    const FD = new FormData( order );
-    XHR.open( "POST", "http://domain.com/mailer/smart.php" );
-    XHR.send( FD );
-  }
-
-  const order = document.getElementById( "order" );
-  order.addEventListener( "submit", function ( event ) {
-    event.preventDefault();
-    sendData();
-	alert( 'Ваш запрос отправлен в отдел логистики!' );	
-	event.target.reset(); 
-  } );
-
-} );
+		const order = document.getElementById( "order" );
+		order.addEventListener( "submit", function ( event ) {
+			event.preventDefault();
+			sendData();
+			alert( 'Ваш запрос отправлен в отдел логистики!' );	
+			event.target.reset(); 
+		} );
+	} );
 
 </script>
     
@@ -80,6 +77,63 @@ window.addEventListener( "load", function () {
 	p{
 		font-size: 14px
 	}
+
+	@media (min-width: 960px) and (max-width: 1080px){        
+		h1{		
+			font-size: 40px;
+		}
+	}
+	@media (min-width: 510px) and (max-width: 959px){        
+		#promo{
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+		}
+		.title{
+			width: 100%;			
+		}
+		h1{		
+			font-size: 40px;
+			margin-top: 40px;
+		}
+		img{
+			width: 500px;
+		}
+		.form{
+			margin-top: 10px;
+		}
+	}
+
+	@media (max-width: 509px){ 
+		#promo{
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+		}
+		.title{
+			width: 100%;			
+		}
+		h1{		
+			font-size: 30px;
+			margin-top: 40px;
+		}
+		img{
+			width: 100%;
+		}
+		.form{
+			margin-top: 0;
+			width: 90%;
+		}
+		h2{
+			text-align: center;
+			font-size: 25px;
+			font-weight: 500;
+		}
+
+		form{
+			width: 90%;
+		}
+	}
 </style>
 
 <section id="promo">
@@ -99,8 +153,8 @@ window.addEventListener( "load", function () {
             <Input 
                 id='phone' 
 				name='phone'
-                placeholder='Телефон' 
-                type='text'/>
+				placeholder='+7 (000) 000-00-00'
+                type='tel'/>
             <Input 
                 id='email' 
 				name='email'
