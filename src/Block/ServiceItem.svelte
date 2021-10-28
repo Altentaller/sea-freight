@@ -1,13 +1,12 @@
 <script>
-    import Button from '../UI/Button.svelte'
     export let id;
     export let title;
     export let price;
     export let description;
 
-  </script>
+</script>
   
-  <style>
+<style>
     .service {
         width: 22%;
         box-sizing: border-box;
@@ -15,7 +14,7 @@
         box-shadow: 6px 6px  #465a82;
         /* box-shadow: 4px 4px 1px #ebab2e; */
         padding: 25px;
-        height: 230px;
+        min-height: 200px;
         font-size: 20px;
         -moz-transition: 0.2s ease;
         -ms-transition: 0.2s ease;
@@ -38,16 +37,34 @@
       font-size: 19px;
     }
 
+	
+	@media (min-width: 501px) and (max-width: 1187px){ 
+		.service {
+        	width: 45%;
+			margin: 0 0 30px 0;
+			min-height: 200px;
+		}
+	}
+	@media (max-width: 500px){ 
+		.service {
+        	width: 97%;
+			margin: 0 15px 30px 15px;
+			min-height: 200px;
+		}
 
-  </style>
+		.service:nth-of-type(4){
+			margin: 0 15px 0 15px;
+		}
+	}
+</style>
   
-  <div class="service">
+<div class="service">
     <div>
-      <h2>{@html title}</h2>
-      <p>{@html price}</p>
-      <p>{@html description}</p>
-    </div>
-  </div>
+      	<h2>{@html title}</h2>
+      	<p>{@html price}</p>
+      	<p>{@html description}</p>
+	</div>
+</div>
 
 
   
