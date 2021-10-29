@@ -1,13 +1,24 @@
 <script>
     import { getContext } from 'svelte';
-    import CallbackPopUp from '../Block/CallbackPopUp.svelte';
-    import Button from '../UI/Button.svelte'; 
+    import PrivacyModal from '../Block/PrivacyModal.svelte';
 
     const { open } = getContext('simple-modal');
   
-    const showCallbackPopUp = () => {
-      open(CallbackPopUp, { title: "Обратный звонок" });
+    const showPrivacyModal = () => {
+      open(PrivacyModal, { title: "Политика в отношении обработки персональных данных" });
     };
-  </script>
+</script>
+
+<style>
+	p{
+		font-size: 12px;
+		text-align: justify;
+	}
+	p:hover{
+		cursor: pointer;
+	}
+</style>
   
-  <Button on:click={showCallbackPopUp} mode="outline" type="button" caption="📞 Обратный звонок" />
+  	<p on:click={showPrivacyModal}>
+		Нажимая кнопку «Жду расчёт», Вы соглашаетесь на обработку персональных данных и с политикой конфиденциальности
+	</p>
