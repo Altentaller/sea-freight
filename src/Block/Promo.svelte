@@ -1,6 +1,8 @@
 <script>
 	import Button from '../UI/Button.svelte'; 
     import Input from '../UI/Input.svelte'; 
+	import ModalView from '../UI/ModalView.svelte';
+    import Modal from 'svelte-simple-modal';
 
 	window.addEventListener( "load", function () {
 		function sendData() {
@@ -174,7 +176,7 @@
             
             <Button type="submit" caption="📧 Жду расчет" />
 
-            <p>Нажимая кнопку «Жду расчёт», Вы соглашаетесь на обработку персональных данных и с политикой конфиденциальности</p>
+        	<Modal><ModalView /></Modal>
         </form> 
     </div>
     
