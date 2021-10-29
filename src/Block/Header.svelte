@@ -1,7 +1,5 @@
 <script>
     import Button from '../UI/Button.svelte'; 
-    /* import ModalView from '../UI/ModalView.svelte';
-    import Modal from 'svelte-simple-modal'; */
 
     export let email;
     export let phone; 
@@ -58,15 +56,10 @@
        <Button href="mailto:{email}" caption="✉️ {email}" />
     </div>
     <div>
-       <Button href="tel:{phone}" caption="{phone} ☎️ Отдел логистики" />
+       <Button href="tel:{phone}" mode="outline" caption="{phone} ☎️ Отдел логистики" />
     </div>
 
     <div>
-        <Button href="tel:{phone}" caption="☎️ {phone}" />
-    </div>
-    <!-- <div>
-        <Modal>
-            <ModalView />
-        </Modal>
-    </div> -->
+        <Button href="tel:{phone}" mode="outline" caption="☎️ {phone}" />
+    </div>    
 </header>
