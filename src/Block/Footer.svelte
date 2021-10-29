@@ -27,6 +27,9 @@
         font-weight: 500;
     }
 
+    a {
+        color: #fff;
+    }
 	@media (min-width: 770px) and (max-width: 960px){ 
 		.contact{
 			top: 0;
@@ -55,7 +58,9 @@
         <p>
             <Button href="tel:{phone}" caption="{phone}" />
         </p>
-        <p>{address}</p>
-        <img src="assets/wechat.png" alt="wechat">
+        <p><a href="whatsapp://send?phone=79831702322" target=_blank> 💬 Написать в WhatsApp</a></p>
+        <p><a href="weixin://dl/chat?wxid_mlik0ewa38aq22" target=_blank> 💬 Написать в WeChat</a></p>
+        <a href="https://msng.link/o/?https%3A%2F%2Fu.wechat.com%2FkJ_N-dev-hnWmU8SbmxyWCA=wc"><img src="assets/wechat.png" alt="wechat"></a>
+        
     </div>
 </footer>
