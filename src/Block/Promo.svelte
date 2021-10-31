@@ -4,7 +4,7 @@
 	import ModalView from '../UI/ModalView.svelte';
     import Modal from 'svelte-simple-modal';
 
-	window.addEventListener( "load", function () {
+	/* window.addEventListener( "load", function () {
 		function sendData() {
 			const XHR = new XMLHttpRequest();
 			const FD = new FormData( order );
@@ -19,7 +19,24 @@
 			alert( 'Ваш запрос отправлен в отдел логистики!' );	
 			event.target.reset(); 
 		} );
-	} );
+	} ); */
+
+	function submitForm(){
+		function sendData() {
+			const XHR = new XMLHttpRequest();
+			const FD = new FormData( order );
+			XHR.open( "POST", "http://altenic.beget.tech/sea/mailer/smart.php" );
+			XHR.send( FD );
+		}
+
+		const order = document.getElementById( "order" );
+		order.addEventListener( "submit", function ( event ) {
+			event.preventDefault();
+			sendData();
+			alert( 'Ваш запрос отправлен в отдел логистики!' );	
+			event.target.reset(); 
+		} );
+	}
 
 </script>
     
@@ -146,7 +163,7 @@
     <div class="form">
         <h2>Запрос коммерческого предложения</h2>
 
-		 <form id="order">
+		 <form id="order" on:submit|preventDefault={submitForm}>
             <Input 
                 id='name' 
 				name='name'
@@ -174,7 +191,7 @@
                 controlType='textarea'
                 rows='2' />
             
-            <Button type="submit" caption="📧 Жду расчет" />
+            <Button on:click={submitForm} type="submit" caption="📧 Жду расчет" />
 
         	<Modal><ModalView /></Modal>
         </form> 
