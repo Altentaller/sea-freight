@@ -25,7 +25,7 @@
 		function sendData() {
 			const XHR = new XMLHttpRequest();
 			const FD = new FormData( order );
-			XHR.open( "POST", "http://altenic.beget.tech/sea/mailer/smart.php" );
+			XHR.open( "POST", "https://konteynery-iz-kitaya.ru/mailer/smart.php" );
 			XHR.send( FD );
 		}
 
