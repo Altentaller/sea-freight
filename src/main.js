@@ -3,9 +3,9 @@ import App from './App.svelte';
 const app = new App({
 	target: document.body,
 	props: {
-		email: 'info@email.ru',
-		address: 'Владивосток, ул. Енисейская 23Б',
-		phone: '+7 (913) 000-00-00'
+		email: 'zakaz@konteynery-iz-kitaya.ru',
+		address: 'Владивосток',
+		phone: '+7 (983) 170-23-22'
 	}
 });
 
