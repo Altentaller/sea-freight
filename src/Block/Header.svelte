@@ -31,15 +31,28 @@
             display: none
         }
     }
+    @media (min-width: 951px) and (max-width: 981px) {
+        header div:nth-of-type(2){
+            display: none
+        }
+    }
+
     @media (max-width: 950px) {
         header div:nth-of-type(2),
         header div:nth-of-type(4){
             display: none
         }
     }
-    @media (max-width: 500px) {
+    @media (max-width: 610px) {
         header div:nth-of-type(1){
             display: none
+        }
+    }
+    @media (max-width: 450px) {
+        header{
+            flex-wrap: nowrap;
+            flex-direction: column-reverse;
+            height: 90px;
         }
     }
     
