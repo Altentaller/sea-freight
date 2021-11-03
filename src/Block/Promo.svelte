@@ -4,23 +4,6 @@
 	import ModalView from '../UI/ModalView.svelte';
     import Modal from 'svelte-simple-modal';
 
-	/* window.addEventListener( "load", function () {
-		function sendData() {
-			const XHR = new XMLHttpRequest();
-			const FD = new FormData( order );
-			XHR.open( "POST", "http://altenic.beget.tech/sea/mailer/smart.php" );
-			XHR.send( FD );
-		}
-
-		const order = document.getElementById( "order" );
-		order.addEventListener( "submit", function ( event ) {
-			event.preventDefault();
-			sendData();
-			alert( 'Ваш запрос отправлен в отдел логистики!' );	
-			event.target.reset(); 
-		} );
-	} ); */
-
 	function submitForm(){
 		function sendData() {
 			const XHR = new XMLHttpRequest();
